@@ -1,0 +1,778 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #0e0e0e;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+header {
+    background: #1a1a1a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Match the shadow of the navbar */
+}
+
+/* Navbar Styles */
+
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #25D366;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 20px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+}
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                display: none; /* Hides navbar on small screens */
+            }
+        }
+
+/* Hero Section with Slideshow */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlideshow 15s infinite; /* Add animation for the slideshow */
+    color: #fff;
+    position: relative;
+}
+
+/* Hero Section with Slideshow */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlideshow 18s infinite; /* Updated animation for six images */
+    color: #fff;
+    position: relative;
+}
+
+/* Hero Section with Slideshow */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlideshow 21s infinite; /* Updated animation for seven images */
+    color: #fff;
+    position: relative;
+}
+
+/* Dark overlay for better text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Keyframe animation for the slideshow with seven images */
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: url("assets/bg 1.jpg");
+    }
+    14.28% {
+        background-image: url("assets/bg 2.jpg");
+    }
+    28.57% {
+        background-image: url("assets/bg 3.jpg");
+    }
+    42.85% {
+        background-image: url("assets/bg 4.jpg");
+    }
+    57.14% {
+        background-image: url("assets/bg 5.jpg");
+    }
+    71.42% {
+        background-image: url("assets/bg 6.jpg");
+    }
+    85.71% {
+        background-image: url("assets/bg 7.jpg");
+    }
+    100% {
+        background-image: url("assets/bg 1.jpg");
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+}
+
+
+
+.cta-btn {
+    background-color: #f0a500;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #d48d00;
+    transform: scale(1.1);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.service-card {
+    background: #222;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Updated Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 20px 30px; /* Adjust to match the header padding */
+    box-shadow: 0px 5px 15px rgba(1, 1, 0, 0.3); /* Ensure consistent shadow */
+    position: relative;
+    z-index: 1000;
+    border-radius: 15px; /* Rounded corners */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #000000;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smoothens hover effect */
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar nav a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0a500, #d48d00);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.navbar nav a:hover::before {
+    left: 0;
+}
+
+.navbar nav a:hover {
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.05); /* Subtle scaling for hover effect */
+}
+
+/* Preventing hover vibration/exploding effect */
+.navbar nav a {
+    transform: scale(1); /* Ensure initial state is stable */
+}
+
+/* Centered Logo */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: url('path/to/logo.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Banner for Sign In, Sign Up, and Forgot Password */
+.banner {
+    background-image: url("assets/Banner\ for\ login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh; /* Adjust height for banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Center the Forms */
+.auth-form {
+    max-width: 400px;
+    margin: -50px auto 50px; /* To adjust the form in the center */
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.auth-form h1 {
+    font-size: 2.5rem;
+    color: #f0a500;
+    margin-bottom: 20px;
+}
+
+.auth-form input,
+.auth-form button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-form input {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Focus effect for inputs */
+.auth-form input:focus {
+    border-color: #f0a500;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
+}
+
+/* Button */
+.auth-form button {
+    background-color: #f0a500;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+    background-color: #d48d00;
+}
+
+.auth-form a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f0a500;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #d48d00;
+}
+
+/* Tour Search Section */
+.tour-search {
+    background-color: #2e2e2e;
+    padding: 100px 100px;
+    color: #fff;
+    text-align: center;
+}
+
+.tour-search h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4bb359;
+}
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of elements when the screen is smaller */
+    gap: 20px; /* Adds space between form elements */
+    justify-content: center; /* Centers the form horizontally */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px; /* Ensures a minimum width for each input */
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #f0a500;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #f0a500;
+    box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
+}
+
+.input-group input#stops {
+    background-color: #333;
+    border: 2px solid #4bb359;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input#stops:focus {
+    box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
+    outline: none;
+}
+
+.search-btn {
+    background-color: #2bc23f;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Centers the search button */
+}
+
+.search-btn:hover {
+    background-color: #4bb359;
+}
+
+/* Our Top Destinations Section */
+/* Our Top Destinations Section */
+#destinations {
+    background: #20201f; /* Change the background color to a warm golden hue */
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4bb359; /* Keep the header color the same */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.destination-card {
+    background: #33332f; /* Change the background color to match the section */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+
+.destination-card .info {
+    padding: 20px;
+    text-align: left;
+}
+
+.destination-card .info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff; /* Change the title color to white for contrast */
+}
+
+.destination-card .info p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn.details {
+    background-color: #28a745; /* Specific color for "details" button */
+}
+
+.btn.details:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide image */
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption text */
+.slide-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Button hover effects */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 20px 0;
+}
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.input-group label {
+    margin-bottom: 5px;
+}
+.input-group input, 
+.input-group select {
+    padding: 8px;
+    font-size: 14px;
+}
+.search-btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.round-trip-fields {
+    display: flex;
+    gap: 20px;
+}
+.one-way-field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Query to Hide Navbar on Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide navbar on small screens */
+    }
+}
